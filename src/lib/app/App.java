@@ -33,9 +33,12 @@ public class App {
     public static String DASHBOARD = "dashboard/dashboard";
     public static String HOME = "home/home";
     public static String ENTREE = "entree/entree";
-    public static String SORTIE = "sorie/sortie";
+    public static String SORTIE = "sortie/sortie";
     public static String FINANCE = "finance/finance";
     public static String STOCK = "stock/stock";
+    public static String LISTE_ENTREE="entree/liste/liste";
+    
+
 
     //Hap<String, String> map=new HashMap();
     public static Map<String, String> map = new HashMap();

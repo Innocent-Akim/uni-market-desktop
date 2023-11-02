@@ -40,4 +40,18 @@ public class Utils {
 
     }
 
+    public void isMenu(Label... bt) {
+        try {
+            for (Label tr : bt) {
+                tr.setStyle("-fx-border-color:Transparent; -fx-border-width: 2px; -fx-text-fill: #8b8f98;");
+                tr.setFont(Font.font("Century Gothic", FontPosture.REGULAR, 13));
+            }
+            bt[0].setStyle("-fx-border-color:  Transparent Transparent teal; -fx-border-width: 2px; -fx-text-fill: teal;");
+            bt[0].setFont(Font.font("Century Gothic", FontWeight.BOLD, 13));
+        } catch (Exception ex) {
+//            error(ex.getMessage());
+        }
+
+    }
+
 }
