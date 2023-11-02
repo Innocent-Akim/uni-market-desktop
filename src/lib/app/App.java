@@ -33,7 +33,9 @@ public class App {
     public static String DASHBOARD = "dashboard/dashboard";
     public static String HOME = "home/home";
     public static String ENTREE = "entree/entree";
-    public static String SORTIE="sorie/sortie";
+    public static String SORTIE = "sorie/sortie";
+    public static String FINANCE = "finance/finance";
+    public static String STOCK = "stock/stock";
 
     //Hap<String, String> map=new HashMap();
     public static Map<String, String> map = new HashMap();
@@ -51,6 +53,11 @@ public class App {
         map.put(ERROR, getUrl(ERROR));
         map.put(DASHBOARD, getUrl(DASHBOARD));
         map.put(HOME, getUrl(HOME));
+        map.put(ENTREE, getUrl(ENTREE));
+        map.put(SORTIE, getUrl(SORTIE   ));
+        map.put(STOCK, getUrl(STOCK));
+        map.put(FINANCE, getUrl(FINANCE));
+
     }
 
     public Node get(String view) {

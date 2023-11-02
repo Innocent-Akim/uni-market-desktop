@@ -115,7 +115,8 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         container = app_screen;
         App.instance().setContaint(app_screen, App.DASHBOARD);
-        Utils.getInstance().IsSeleted(b_dash,b_entrees,b_sorties,b_stocks,b_finances,b_rapport_entrees,b_rapport_sorties,b_rapport_stocks,b_rapport_finances,b_histo_entrees,b_histoSorties, b_identifications,b_products,b_configuration,b_droitAcces);
+        Utils.getInstance().IsSeleted(b_dash, b_entrees, b_sorties, b_stocks, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        isAction();
     }
 
     @FXML
@@ -128,6 +129,25 @@ public class HomeController implements Initializable {
 
     @FXML
     private void CallStatistique(MouseEvent event) {
+    }
+
+    void isAction() {
+        b_dash.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.DASHBOARD);
+            Utils.getInstance().IsSeleted(b_dash, b_entrees, b_sorties, b_stocks, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        });
+        b_entrees.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.ENTREE);
+            Utils.getInstance().IsSeleted(b_entrees, b_dash, b_sorties, b_stocks, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        });
+        b_sorties.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.SORTIE);
+            Utils.getInstance().IsSeleted(b_sorties, b_dash, b_entrees, b_stocks, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        });
+        b_stocks.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.STOCK);
+            Utils.getInstance().IsSeleted(b_stocks, b_sorties, b_dash, b_entrees, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        });
     }
 
 }
