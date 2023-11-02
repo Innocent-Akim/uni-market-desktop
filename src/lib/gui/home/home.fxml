@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1006.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.home.HomeController">
+   <children>
+      <StackPane fx:id="app_screen" layoutX="239.0" layoutY="73.0" prefHeight="841.0" prefWidth="767.0" style="-fx-background-color: EAEAEA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ScrollPane layoutX="-10.0" prefHeight="841.0" prefWidth="240.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="839.0" prefWidth="200.0">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="5.0" layoutY="800.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #CD1818; -fx-background-radius: 0.5px; -fx-border-radius: 0.5px;" text="Déconnexion" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <AnchorPane layoutX="5.0" layoutY="89.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="4.0" layoutY="8.0" prefHeight="30.0" prefWidth="190.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan_dash" prefHeight="21.0" prefWidth="190.0">
+                                 <children>
+                                    <Label fx:id="b_dash" layoutX="17.0" layoutY="3.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="168.0" text="Vue d'ensemble" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="TEAL" glyphName="DASHBOARD" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="b_dash1" layoutX="4.0" layoutY="69.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="189.0" text="Tableau de bord" textFill="#464646" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="4.0" layoutY="152.0" prefHeight="155.0" prefWidth="190.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="4.0" layoutY="8.0" prefHeight="141.0" prefWidth="190.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan_entrees" prefHeight="27.0" prefWidth="209.0">
+                                 <children>
+                                    <Label fx:id="b_entrees" layoutX="16.0" layoutY="4.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="169.0" text="Entrées" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="TEAL" glyphName="DIFF" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_sorties" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="b_sorties" layoutX="16.0" layoutY="5.0" onMouseClicked="#Calloperation" prefHeight="20.0" prefWidth="169.0" text="Sorties" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fx:id="o1" fill="TEAL" glyphName="SNOWFLAKE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_finances" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label fx:id="b_finances" layoutX="16.0" layoutY="5.0" onMouseClicked="#CallStatistique" prefHeight="20.0" prefWidth="143.0" text="Finances" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="TEAL" glyphName="CHART_LINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_stocks" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="b_stocks" layoutX="16.0" layoutY="2.0" prefHeight="20.0" prefWidth="143.0" text="Stocks" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="TEAL" glyphName="CART_OUTLINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="b_dash11" layoutX="7.0" layoutY="129.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="189.0" text="Operations" textFill="#464646" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="7.0" layoutY="330.0" prefHeight="155.0" prefWidth="190.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="4.0" layoutY="8.0" prefHeight="148.0" prefWidth="190.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan_rapport_entrees" prefHeight="27.0" prefWidth="209.0">
+                                 <children>
+                                    <Label fx:id="b_rapport_entrees" layoutX="16.0" layoutY="4.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="169.0" text="Entrées" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="TEAL" glyphName="DASHBOARD" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_rapport_sorties" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="b_rapport_sorties" layoutX="16.0" layoutY="5.0" onMouseClicked="#Calloperation" prefHeight="20.0" prefWidth="169.0" text="Sorties" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fx:id="o11" fill="TEAL" glyphName="BUCKET" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_rapport_finances" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label fx:id="b_rapport_finances" layoutX="16.0" layoutY="4.0" onMouseClicked="#CallStatistique" prefHeight="20.0" prefWidth="158.0" text="Finances" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="TEAL" glyphName="CHART_LINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_rapport_stocks" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="b_rapport_stocks" layoutX="16.0" layoutY="2.0" prefHeight="24.0" prefWidth="174.0" text="Stocks" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="TEAL" glyphName="CART_OUTLINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="b_dash111" layoutX="4.0" layoutY="308.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="189.0" text="Rapports" textFill="#464646" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="4.0" layoutY="511.0" prefHeight="80.0" prefWidth="190.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="4.0" layoutY="8.0" prefHeight="79.0" prefWidth="190.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan_historique_entrees" prefHeight="27.0" prefWidth="209.0">
+                                 <children>
+                                    <Label fx:id="b_histo_entrees" layoutX="16.0" layoutY="4.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="169.0" text="Historiques entrées" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="TEAL" glyphName="DASHBOARD" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_historique_sotries" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="b_histoSorties" layoutX="16.0" layoutY="5.0" onMouseClicked="#Calloperation" prefHeight="20.0" prefWidth="169.0" text="Historiaues sorties" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fx:id="o111" fill="TEAL" glyphName="BUCKET" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="b_dash1111" layoutX="4.0" layoutY="488.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="189.0" text="Historiques" textFill="#464646" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b_dash11111" layoutX="4.0" layoutY="600.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="189.0" text="Paramètres" textFill="#464646" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="5.0" layoutY="626.0" prefHeight="155.0" prefWidth="190.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="4.0" layoutY="8.0" prefHeight="148.0" prefWidth="190.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan_identification" prefHeight="27.0" prefWidth="209.0">
+                                 <children>
+                                    <Label fx:id="b_identifications" layoutX="16.0" layoutY="4.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="169.0" text="Identifications" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="TEAL" glyphName="DASHBOARD" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_produicts" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="b_products" layoutX="16.0" layoutY="5.0" onMouseClicked="#Calloperation" prefHeight="20.0" prefWidth="169.0" text="Produits" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fx:id="o112" fill="TEAL" glyphName="BUCKET" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_droit_acces" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label fx:id="b_droitAcces" layoutX="16.0" layoutY="4.0" onMouseClicked="#CallStatistique" prefHeight="20.0" prefWidth="164.0" text="Droit d'accès" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fx:id="s111" fill="TEAL" glyphName="TABLE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan_configurations" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="b_configuration" layoutX="16.0" layoutY="4.0" prefHeight="20.0" prefWidth="165.0" text="Configurations" textFill="#464646" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="5.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="TEAL" glyphName="CART_OUTLINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
