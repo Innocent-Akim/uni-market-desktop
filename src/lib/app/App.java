@@ -36,11 +36,11 @@ public class App {
     public static String SORTIE = "sortie/sortie";
     public static String FINANCE = "finance/finance";
     public static String STOCK = "stock/stock";
-    public static String LISTE_ENTREE="entree/liste/liste";
-    
+    public static String LISTE_ENTREE = "entree/liste/liste";
+    public static String APPROVISIONNEMENT = "entree/approvisionnement/approvisionnement";
+    public static String LISTE_SORTIE = "";
+    public static String VENTES = "sortie/vente/ventes";
 
-
-    //Hap<String, String> map=new HashMap();
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
@@ -57,9 +57,11 @@ public class App {
         map.put(DASHBOARD, getUrl(DASHBOARD));
         map.put(HOME, getUrl(HOME));
         map.put(ENTREE, getUrl(ENTREE));
-        map.put(SORTIE, getUrl(SORTIE   ));
+        map.put(SORTIE, getUrl(SORTIE));
         map.put(STOCK, getUrl(STOCK));
         map.put(FINANCE, getUrl(FINANCE));
+        map.put(LISTE_ENTREE, getUrl(LISTE_ENTREE));
+        map.put(VENTES, getUrl(VENTES));
 
     }
 

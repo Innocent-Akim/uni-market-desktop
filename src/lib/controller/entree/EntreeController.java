@@ -26,8 +26,6 @@ public class EntreeController implements Initializable {
     @FXML
     private Label b_approvisionnement;
     @FXML
-    private Label b_annuler;
-    @FXML
     private StackPane screen_entree;
 
     /**

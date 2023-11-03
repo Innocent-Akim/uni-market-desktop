@@ -7,7 +7,11 @@ package lib.controller.sortie;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import lib.utils.Utils;
 
 /**
  * FXML Controller class
@@ -16,12 +20,30 @@ import javafx.fxml.Initializable;
  */
 public class SortieController implements Initializable {
 
+    @FXML
+    private StackPane screen_ventes;
+    @FXML
+    private Label b_liste_sortie;
+    @FXML
+    private Label b_ventes;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+        isAction();
+        Utils.getInstance().isMenu(b_liste_sortie, b_ventes);
+    }
+
+    void isAction() {
+        b_ventes.setOnMouseClicked((e) -> {
+            Utils.getInstance().isMenu(b_ventes, b_liste_sortie);
+        });
+        b_liste_sortie.setOnMouseClicked((e) -> {
+            Utils.getInstance().isMenu(b_liste_sortie, b_ventes);
+        });
+    }
+
 }
