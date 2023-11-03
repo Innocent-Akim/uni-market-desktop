@@ -38,8 +38,9 @@ public class App {
     public static String STOCK = "stock/stock";
     public static String LISTE_ENTREE = "entree/liste/liste";
     public static String APPROVISIONNEMENT = "entree/approvisionnement/approvisionnement";
-    public static String LISTE_SORTIE = "";
+    public static String LISTE_SORTIE = "sortie/liste/liste";
     public static String VENTES = "sortie/vente/ventes";
+
 
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
@@ -62,7 +63,7 @@ public class App {
         map.put(FINANCE, getUrl(FINANCE));
         map.put(LISTE_ENTREE, getUrl(LISTE_ENTREE));
         map.put(VENTES, getUrl(VENTES));
-
+        map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
     }
 
     public Node get(String view) {
