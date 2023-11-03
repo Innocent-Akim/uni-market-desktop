@@ -3,26 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lib.controller.stock;
+package lib.dialog.product;
 
-import com.jfoenix.controls.JFXListView;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
  *
  * @author PC
  */
-public class StockController implements Initializable {
+public class AddProductController implements Initializable {
 
     @FXML
-    private TextField searchField;
+    private Text subNom;
     @FXML
-    private JFXListView<?> tabListe;
+    private Text designation;
+    @FXML
+    private MaterialDesignIconView icon2;
+    @FXML
+    private Text titre;
 
     /**
      * Initializes the controller class.
@@ -31,5 +36,9 @@ public class StockController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void fermer(MouseEvent event) {
+    }
     
 }

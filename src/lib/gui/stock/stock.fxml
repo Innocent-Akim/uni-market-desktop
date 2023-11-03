@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1024.0" style="-fx-background-color: #FFF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lib.controller.stock.StockController">
-    
+<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1024.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.stock.StockController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="45.0" prefWidth="405.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: teal; -fx-background-radius: 5px;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EXTERNAL_LINK" size="22" />
+               </graphic>
+            </Label>
+            <Text fill="#404040" layoutX="64.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock" wrappingWidth="90.00000381469727">
+               <font>
+                  <Font name="Nirmala UI Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#404040cb" layoutX="64.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans l'interface de gestion des entrées de stock" wrappingWidth="358.6666603088379">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="685.0" layoutY="45.0" prefHeight="33.0" prefWidth="366.0" style="-fx-border-color: #dddada; -fx-border-width: 0.5px;" AnchorPane.rightAnchor="5.0">
+         <children>
+            <FontAwesomeIconView fill="#dddada" glyphName="SEARCH" layoutX="340.0" layoutY="21.0" size="18" />
+            <TextField fx:id="searchField" prefHeight="35.0" prefWidth="334.0" promptText="Recherche par désignation..." style="-fx-background-color: Transparent;">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <JFXListView fx:id="tabListe" focusTraversable="false" layoutX="14.0" layoutY="79.0" prefHeight="753.0" prefWidth="1004.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="83.0" />
+   </children>
 </AnchorPane>

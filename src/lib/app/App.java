@@ -5,12 +5,15 @@
  */
 package lib.app;
 
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -40,11 +43,12 @@ public class App {
     public static String APPROVISIONNEMENT = "entree/approvisionnement/approvisionnement";
     public static String LISTE_SORTIE = "sortie/liste/liste";
     public static String VENTES = "sortie/vente/ventes";
-
+    public static String PRODUCTS = "products/products";
 
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
+    public static JFXDialog dialog;
     public static Node currentView = null;
     private static App instance;
 
@@ -64,6 +68,7 @@ public class App {
         map.put(LISTE_ENTREE, getUrl(LISTE_ENTREE));
         map.put(VENTES, getUrl(VENTES));
         map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
+        map.put(PRODUCTS, getUrl(PRODUCTS));
     }
 
     public Node get(String view) {
@@ -128,6 +133,28 @@ public class App {
             e.printStackTrace();
         }
 
+    }
+
+    public void setDialog(String interfaces) {
+        JFXDialogLayout dl = new JFXDialogLayout();
+        Node node = get(interfaces);
+        dl.setBody(node);
+        dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, false);
+        dialog.show(stackPane);
+    }
+
+    public void setDialog(String url, float x, float y) {
+        try {
+            Node node = FXMLLoader.load(getClass().getResource(url));
+            JFXDialogLayout dl = new JFXDialogLayout();
+            dl.setPrefSize(x, y);
+            dl.setPadding(Insets.EMPTY);
+            dl.setBody(node);
+            dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, false);
+            dialog.show(stackPane);
+        } catch (IOException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public static App instance() {
