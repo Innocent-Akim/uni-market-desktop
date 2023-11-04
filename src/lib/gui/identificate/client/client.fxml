@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
 <AnchorPane id="AnchorPane" prefHeight="756.0" prefWidth="1024.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.identificate.client.ClientController">
    <children>
-      <JFXListView layoutY="60.0" prefHeight="691.0" prefWidth="1014.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
+      <JFXListView fx:id="listClient" focusTraversable="false" layoutY="60.0" prefHeight="691.0" prefWidth="1014.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
+      <Button fx:id="b_nouveau_client" layoutX="852.0" layoutY="21.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" text="Nouveau client" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="16.0" />
    </children>
 </AnchorPane>
