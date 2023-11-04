@@ -7,7 +7,11 @@ package lib.controller.identificate.client;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import lib.app.App;
+import lib.app.References;
 
 /**
  * FXML Controller class
@@ -16,12 +20,22 @@ import javafx.fxml.Initializable;
  */
 public class ClientController implements Initializable {
 
+    @FXML
+    private Button b_nouveau_client;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        References.styleButton(b_nouveau_client);
+        isAction();
+    }
+
+    void isAction() {
+        b_nouveau_client.setOnAction((e) -> {
+            App.instance().setDialog(App.ADD_CLIENT);
+        });
+    }
+
 }
