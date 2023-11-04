@@ -47,10 +47,10 @@ public class App {
     public static String PRODUCTS = "products/products";
     public static String ADD_PRODUICT = "product/addProduct";
 
-    public static String IDENTIFICATE_PRINCIPALE = "identificate/principale";
-    public static String IDENTIFICATE_AGENT = "identificate/agent";
-    public static String IDENTIFICATE_CLIENT = "identificate/client";
-    public static String IDENTIFICATE_FOURNISSEUR = "identificate/fournisseur";
+    public static String IDENTIFICATE_PRINCIPALE = "identificate/principale/principale";
+    public static String IDENTIFICATE_AGENT = "identificate/agent/agent";
+    public static String IDENTIFICATE_CLIENT = "identificate/client/client";
+    public static String IDENTIFICATE_FOURNISSEUR = "identificate/fournisseur/fournisseur";
 
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();

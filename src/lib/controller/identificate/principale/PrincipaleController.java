@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import lib.app.App;
+import lib.utils.Utils;
 
 /**
  * FXML Controller class
@@ -33,16 +35,27 @@ public class PrincipaleController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        App.instance().setContaint(scree_identif, App.IDENTIFICATE_AGENT);
+        Utils.getInstance().isMenu(b_nouveau_agent, b_nouveau_client, b_nouveau_forusseur);
+        isAction();
     }
 
     void isAction() {
         b_nouveau_agent.setOnMouseClicked((e) -> {
+            App.instance().setContaint(scree_identif, App.IDENTIFICATE_AGENT);
+            Utils.getInstance().isMenu(b_nouveau_agent, b_nouveau_client, b_nouveau_forusseur);
+
         });
         b_nouveau_client.setOnMouseClicked((e) -> {
+            App.instance().setContaint(scree_identif, App.IDENTIFICATE_CLIENT);
+            Utils.getInstance().isMenu(b_nouveau_client, b_nouveau_agent, b_nouveau_forusseur);
+
         });
 
         b_nouveau_forusseur.setOnMouseClicked((e) -> {
+            App.instance().setContaint(scree_identif, App.IDENTIFICATE_FOURNISSEUR);
+            Utils.getInstance().isMenu(b_nouveau_forusseur, b_nouveau_client, b_nouveau_agent);
+
         });
 
     }
