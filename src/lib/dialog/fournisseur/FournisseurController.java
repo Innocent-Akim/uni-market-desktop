@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lib.controller.identificate.fournisseur;
+package lib.dialog.fournisseur;
 
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import lib.app.App;
-import lib.app.References;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -21,21 +22,28 @@ import lib.app.References;
 public class FournisseurController implements Initializable {
 
     @FXML
-    private Button b_nouveau_fournisseur;
+    private Text subNom;
+    @FXML
+    private Text designation;
+    @FXML
+    private MaterialDesignIconView icon2;
+    @FXML
+    private Text titre;
+    @FXML
+    private TextField nomTextField;
+    @FXML
+    private TextField telephoneTextField;
+    @FXML
+    private TextField adresseTextField;
+    @FXML
+    private Button b_enregistrer;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        References.styleButton(b_nouveau_fournisseur);
-        isAction();
-    }
-
-    void isAction() {
-        b_nouveau_fournisseur.setOnAction((e) -> {
-            App.instance().setDialog(App.ADD_FOURNISSEUR);
-        });
-    }
-
+        // TODO
+    }    
+    
 }

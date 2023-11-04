@@ -45,9 +45,11 @@ public class App {
     public static String LISTE_SORTIE = "sortie/liste/liste";
     public static String VENTES = "sortie/vente/ventes";
     public static String PRODUCTS = "products/products";
+
     public static String ADD_PRODUICT = "product/addProduct";
     public static String ADD_AGENT = "agent/agent";
     public static String ADD_CLIENT = "client/client";
+    public static String ADD_FOURNISSEUR = "fournisseur/fournisseur";
 
     public static String IDENTIFICATE_PRINCIPALE = "identificate/principale/principale";
     public static String IDENTIFICATE_AGENT = "identificate/agent/agent";
@@ -94,6 +96,7 @@ public class App {
         map.put(ADD_PRODUICT, getDialog(ADD_PRODUICT));
         map.put(ADD_AGENT, getDialog(ADD_AGENT));
         map.put(ADD_CLIENT, getDialog(ADD_CLIENT));
+        map.put(ADD_FOURNISSEUR, getDialog(ADD_FOURNISSEUR));
     }
 
     public Node get(String view) {

@@ -34,7 +34,7 @@ public class ClientController implements Initializable {
 
     void isAction() {
         b_nouveau_client.setOnAction((e) -> {
-            App.instance().setDialog(App.ADD_AGENT);
+            App.instance().setDialog(App.ADD_CLIENT);
         });
     }
 
