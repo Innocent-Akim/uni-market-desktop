@@ -24,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import lib.main.Main;
+import org.controlsfx.control.PopOver;
 
 /**
  *
@@ -44,16 +45,22 @@ public class App {
     public static String LISTE_SORTIE = "sortie/liste/liste";
     public static String VENTES = "sortie/vente/ventes";
     public static String PRODUCTS = "products/products";
+    public static String ADD_PRODUICT = "product/addProduct";
 
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
     public static JFXDialog dialog;
+    public static PopOver over = new PopOver();
     public static Node currentView = null;
     private static App instance;
 
     private String getUrl(String url) {
         return "/lib/gui/" + url + ".fxml";
+    }
+
+    private String getDialog(String url) {
+        return "/lib/dialog/" + url + ".fxml";
     }
 
     public App() {
@@ -69,6 +76,7 @@ public class App {
         map.put(VENTES, getUrl(VENTES));
         map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
         map.put(PRODUCTS, getUrl(PRODUCTS));
+        map.put(ADD_PRODUICT, getDialog(ADD_PRODUICT));
     }
 
     public Node get(String view) {
@@ -139,7 +147,7 @@ public class App {
         JFXDialogLayout dl = new JFXDialogLayout();
         Node node = get(interfaces);
         dl.setBody(node);
-        dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, false);
+        dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, true);
         dialog.show(stackPane);
     }
 
@@ -154,6 +162,18 @@ public class App {
             dialog.show(stackPane);
         } catch (IOException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void popOverMenu(Node node, Node interfaces, PopOver.ArrowLocation arrowLocation) {
+        if (!over.isShowing()) {
+            AnchorPane box = (AnchorPane) interfaces;
+            over.setArrowLocation(arrowLocation);
+            over.setAutoHide(true);
+            over.setContentNode(box);
+            over.show(node, 0);
+        } else {
+            over.hide();
         }
     }
 

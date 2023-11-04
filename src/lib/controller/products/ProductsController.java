@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import lib.app.App;
 
 /**
  * FXML Controller class
@@ -33,10 +34,13 @@ public class ProductsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-    
-    void isAction(){
-    
+        isAction();
     }
-    
+
+    void isAction() {
+        btn_nouvelle_products.setOnAction((e) -> {
+            App.instance().setDialog(App.ADD_PRODUICT);
+        });
+    }
+
 }

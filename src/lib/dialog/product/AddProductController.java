@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
@@ -28,6 +29,8 @@ public class AddProductController implements Initializable {
     private MaterialDesignIconView icon2;
     @FXML
     private Text titre;
+    @FXML
+    private Button b_enregistrer;
 
     /**
      * Initializes the controller class.
@@ -35,10 +38,13 @@ public class AddProductController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
-    @FXML
-    private void fermer(MouseEvent event) {
+        isAction();
     }
-    
+
+    void isAction() {
+        b_enregistrer.setOnAction((e) -> {
+           
+        });
+    }
+
 }
