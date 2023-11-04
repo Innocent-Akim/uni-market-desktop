@@ -47,6 +47,11 @@ public class App {
     public static String PRODUCTS = "products/products";
     public static String ADD_PRODUICT = "product/addProduct";
 
+    public static String IDENTIFICATE_PRINCIPALE = "identificate/principale";
+    public static String IDENTIFICATE_AGENT = "identificate/agent";
+    public static String IDENTIFICATE_CLIENT = "identificate/client";
+    public static String IDENTIFICATE_FOURNISSEUR = "identificate/fournisseur";
+
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
@@ -76,6 +81,14 @@ public class App {
         map.put(VENTES, getUrl(VENTES));
         map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
         map.put(PRODUCTS, getUrl(PRODUCTS));
+        
+        //Identification
+        map.put(IDENTIFICATE_AGENT, getUrl(IDENTIFICATE_AGENT));
+        map.put(IDENTIFICATE_CLIENT, getUrl(IDENTIFICATE_CLIENT));
+        map.put(IDENTIFICATE_FOURNISSEUR, getUrl(IDENTIFICATE_FOURNISSEUR));
+        map.put(IDENTIFICATE_PRINCIPALE, getUrl(IDENTIFICATE_PRINCIPALE));
+        
+        //Dialog
         map.put(ADD_PRODUICT, getDialog(ADD_PRODUICT));
     }
 

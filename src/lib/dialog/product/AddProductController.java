@@ -69,9 +69,10 @@ public class AddProductController implements Initializable {
         JFXDialogLayout layout = new JFXDialogLayout();
         TextField text_categorie = new TextField();
         text_categorie.setStyle("-fx-border-color: #C4BEBB;-fx-text-fill: #000000; "
-                + "-fx-border-with: 0.5px; "
+                + "-fx-border-width: 0.5px; "
                 + "-fx-background-color: Transparent; "
                 + "-fx-border-radius: 5px; ");
+        
         text_categorie.setFont(Font.font("Lucida Sans Unicode", FontPosture.REGULAR, 13));
         text_categorie.setPromptText("Entrer la catégorie");
         VBox box = new VBox();
