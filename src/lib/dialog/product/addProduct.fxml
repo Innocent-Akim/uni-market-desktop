@@ -100,7 +100,7 @@
                </font>
             </Label>
             <ComboBox layoutY="21.0" prefHeight="28.0" prefWidth="355.0" style="-fx-background-color: Transparent; -fx-border-color: #dddada; -fx-border-width: 0.5px;" />
-            <Button layoutX="359.0" layoutY="21.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="26.0" style="-fx-background-color: #008080;" textFill="WHITE" AnchorPane.rightAnchor="1.0">
+            <Button fx:id="b_new_categorie" layoutX="359.0" layoutY="21.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="26.0" style="-fx-background-color: #008080;" textFill="WHITE" AnchorPane.rightAnchor="1.0">
                <font>
                   <Font name="Lucida Sans Unicode" size="12.0" />
                </font>
