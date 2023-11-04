@@ -148,6 +148,26 @@ public class HomeController implements Initializable {
             App.instance().setContaint(app_screen, App.STOCK);
             Utils.getInstance().IsSeleted(b_stocks, b_sorties, b_dash, b_entrees, b_finances, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
         });
+        b_finances.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.FINANCE);
+            Utils.getInstance().IsSeleted(b_finances, b_stocks, b_sorties, b_dash, b_entrees, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_products, b_configuration, b_droitAcces);
+        });
+
+        b_products.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.PRODUCTS);
+            Utils.getInstance().IsSeleted(b_products, b_finances, b_stocks, b_sorties, b_dash, b_entrees, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_configuration, b_droitAcces);
+        });
+
+        b_configuration.setOnMouseClicked((e) -> {
+            App.instance().setContaint(app_screen, App.PRODUCTS);
+            Utils.getInstance().IsSeleted(b_configuration, b_products, b_finances, b_stocks, b_sorties, b_dash, b_entrees, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties, b_identifications, b_droitAcces);
+        });
+        
+        b_identifications.setOnMouseClicked((e)->{
+       
+        App.instance().setContaint(app_screen, App.IDENTIFICATE_PRINCIPALE);
+            Utils.getInstance().IsSeleted(b_identifications,b_configuration, b_products, b_finances, b_stocks, b_sorties, b_dash, b_entrees, b_rapport_entrees, b_rapport_sorties, b_rapport_stocks, b_rapport_finances, b_histo_entrees, b_histoSorties,  b_droitAcces);
+        });
     }
 
 }

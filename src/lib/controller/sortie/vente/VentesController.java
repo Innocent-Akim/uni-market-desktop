@@ -3,26 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lib.controller.stock;
+package lib.controller.sortie.vente;
 
-import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author PC
  */
-public class StockController implements Initializable {
-
-    @FXML
-    private TextField searchField;
-    @FXML
-    private JFXListView<?> tabListe;
+public class VentesController implements Initializable {
 
     /**
      * Initializes the controller class.

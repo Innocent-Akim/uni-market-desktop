@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.sortie.SortieController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1024.0" style="-fx-background-color: #fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lib.controller.sortie.SortieController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="405.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: teal; -fx-background-radius: 5px;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PUZZLE_PIECE" size="22" />
+               </graphic>
+            </Label>
+            <Text fill="#404040" layoutX="64.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sortie" wrappingWidth="90.00000381469727" AnchorPane.leftAnchor="64.0">
+               <font>
+                  <Font name="Nirmala UI Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#404040cb" layoutX="64.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans l'interface de gestion des entrées de stock" wrappingWidth="358.6666603088379" AnchorPane.leftAnchor="64.0">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="15.0" layoutY="64.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="54.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="b_liste_sortie" prefHeight="17.0" prefWidth="159.0" style="-fx-border-color: Transparent   Transparent teal  Transparent; -fx-background-color: white;" text="Liste des sortie">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="b_ventes" prefHeight="17.0" prefWidth="159.0" style="-fx-border-color: Transparent   Transparent teal  Transparent; -fx-background-color: white;" text="Ventes" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </GridPane>
+      <StackPane fx:id="screen_ventes" layoutX="5.0" layoutY="73.0" prefHeight="766.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0" />
+   </children>
 </AnchorPane>

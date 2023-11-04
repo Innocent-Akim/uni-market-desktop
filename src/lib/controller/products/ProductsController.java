@@ -5,9 +5,14 @@
  */
 package lib.controller.products;
 
+import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import lib.app.App;
 
 /**
  * FXML Controller class
@@ -16,12 +21,26 @@ import javafx.fxml.Initializable;
  */
 public class ProductsController implements Initializable {
 
+    @FXML
+    private TextField searchField;
+    @FXML
+    private JFXListView<?> tabListe;
+    @FXML
+    private Button btn_nouvelle_products;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+        isAction();
+    }
+
+    void isAction() {
+        btn_nouvelle_products.setOnAction((e) -> {
+            App.instance().setDialog(App.ADD_PRODUICT);
+        });
+    }
+
 }

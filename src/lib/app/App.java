@@ -5,12 +5,15 @@
  */
 package lib.app;
 
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -21,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import lib.main.Main;
+import org.controlsfx.control.PopOver;
 
 /**
  *
@@ -33,19 +37,35 @@ public class App {
     public static String DASHBOARD = "dashboard/dashboard";
     public static String HOME = "home/home";
     public static String ENTREE = "entree/entree";
-    public static String SORTIE = "sorie/sortie";
+    public static String SORTIE = "sortie/sortie";
     public static String FINANCE = "finance/finance";
     public static String STOCK = "stock/stock";
+    public static String LISTE_ENTREE = "entree/liste/liste";
+    public static String APPROVISIONNEMENT = "entree/approvisionnement/approvisionnement";
+    public static String LISTE_SORTIE = "sortie/liste/liste";
+    public static String VENTES = "sortie/vente/ventes";
+    public static String PRODUCTS = "products/products";
+    public static String ADD_PRODUICT = "product/addProduct";
 
-    //Hap<String, String> map=new HashMap();
+    public static String IDENTIFICATE_PRINCIPALE = "identificate/principale/principale";
+    public static String IDENTIFICATE_AGENT = "identificate/agent/agent";
+    public static String IDENTIFICATE_CLIENT = "identificate/client/client";
+    public static String IDENTIFICATE_FOURNISSEUR = "identificate/fournisseur/fournisseur";
+
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
+    public static JFXDialog dialog;
+    public static PopOver over = new PopOver();
     public static Node currentView = null;
     private static App instance;
 
     private String getUrl(String url) {
         return "/lib/gui/" + url + ".fxml";
+    }
+
+    private String getDialog(String url) {
+        return "/lib/dialog/" + url + ".fxml";
     }
 
     public App() {
@@ -54,10 +74,22 @@ public class App {
         map.put(DASHBOARD, getUrl(DASHBOARD));
         map.put(HOME, getUrl(HOME));
         map.put(ENTREE, getUrl(ENTREE));
-        map.put(SORTIE, getUrl(SORTIE   ));
+        map.put(SORTIE, getUrl(SORTIE));
         map.put(STOCK, getUrl(STOCK));
         map.put(FINANCE, getUrl(FINANCE));
-
+        map.put(LISTE_ENTREE, getUrl(LISTE_ENTREE));
+        map.put(VENTES, getUrl(VENTES));
+        map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
+        map.put(PRODUCTS, getUrl(PRODUCTS));
+        
+        //Identification
+        map.put(IDENTIFICATE_AGENT, getUrl(IDENTIFICATE_AGENT));
+        map.put(IDENTIFICATE_CLIENT, getUrl(IDENTIFICATE_CLIENT));
+        map.put(IDENTIFICATE_FOURNISSEUR, getUrl(IDENTIFICATE_FOURNISSEUR));
+        map.put(IDENTIFICATE_PRINCIPALE, getUrl(IDENTIFICATE_PRINCIPALE));
+        
+        //Dialog
+        map.put(ADD_PRODUICT, getDialog(ADD_PRODUICT));
     }
 
     public Node get(String view) {
@@ -122,6 +154,40 @@ public class App {
             e.printStackTrace();
         }
 
+    }
+
+    public void setDialog(String interfaces) {
+        JFXDialogLayout dl = new JFXDialogLayout();
+        Node node = get(interfaces);
+        dl.setBody(node);
+        dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, true);
+        dialog.show(stackPane);
+    }
+
+    public void setDialog(String url, float x, float y) {
+        try {
+            Node node = FXMLLoader.load(getClass().getResource(url));
+            JFXDialogLayout dl = new JFXDialogLayout();
+            dl.setPrefSize(x, y);
+            dl.setPadding(Insets.EMPTY);
+            dl.setBody(node);
+            dialog = new JFXDialog(stackPane, dl, JFXDialog.DialogTransition.CENTER, false);
+            dialog.show(stackPane);
+        } catch (IOException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void popOverMenu(Node node, Node interfaces, PopOver.ArrowLocation arrowLocation) {
+        if (!over.isShowing()) {
+            AnchorPane box = (AnchorPane) interfaces;
+            over.setArrowLocation(arrowLocation);
+            over.setAutoHide(true);
+            over.setContentNode(box);
+            over.show(node, 0);
+        } else {
+            over.hide();
+        }
     }
 
     public static App instance() {
