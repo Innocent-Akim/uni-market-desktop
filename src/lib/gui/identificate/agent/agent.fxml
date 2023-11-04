@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lib.controller.identificate.agent.AgentController">
-    
+<AnchorPane id="AnchorPane" prefHeight="756.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.identificate.agent.AgentController">
+   <children>
+      <JFXListView fx:id="listeAgent" focusTraversable="false" layoutX="14.0" layoutY="65.0" prefHeight="686.0" prefWidth="1014.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
+      <Button fx:id="b_nouveau_agent" layoutX="868.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" text="Nouveu agent" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="16.0" />
+   </children>
 </AnchorPane>
