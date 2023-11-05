@@ -85,6 +85,7 @@ public class App {
         map.put(VENTES, getUrl(VENTES));
         map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
         map.put(PRODUCTS, getUrl(PRODUCTS));
+           map.put(APPROVISIONNEMENT, getUrl(APPROVISIONNEMENT));
 
         //Identification
         map.put(IDENTIFICATE_AGENT, getUrl(IDENTIFICATE_AGENT));
