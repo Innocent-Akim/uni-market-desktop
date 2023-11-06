@@ -7,20 +7,13 @@ package lib.controller.entree.approvisionnement;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import lib.app.App;
 import lib.app.appro.PanierEntree;
-import lib.main.Main;
 import lib.model.panierAppro.PanierAppro;
 
 /**
@@ -48,12 +41,15 @@ public class ApprovisionnementController implements Initializable {
     private Button b_valider_panier;
     @FXML
     private JFXListView<?> lisPanier;
+    public static JFXListView<?> public_lisPanier;
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        public_lisPanier = lisPanier;
         isAction();
     }
 

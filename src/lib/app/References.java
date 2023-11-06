@@ -18,6 +18,7 @@ public class References {
     public static String APP_TITLE = "UNI-MARKET";
     public static String APP_ICON = "/lib/assets/pharmacien.png";
     public static Font fontApp = Font.font("Lucida Sans Unicode", FontPosture.REGULAR, 13);
+    public static String LOAD_PANIER = "/lib/load/entree/approvisionnement/loadPanierApprovisionnement.fxml";
 
     public static void styleButton(Button... btn) {
         btn[0].setStyle("-fx-background-color: teal; -fx-text-fill: #fff; -fx-cursor: HAND;");
