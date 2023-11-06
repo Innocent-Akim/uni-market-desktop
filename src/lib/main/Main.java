@@ -5,6 +5,7 @@
  */
 package lib.main;
 
+import com.jfoenix.controls.JFXListView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import lib.app.App;
@@ -19,6 +20,7 @@ public class Main extends Application{
 //    public static Acces acces = null;
     public static vulembereGUI stage = null;
     public static Stage primaryStage_;
+    public static JFXListView loadPreview;
   
 
 

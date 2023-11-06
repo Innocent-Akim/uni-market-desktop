@@ -7,6 +7,7 @@ package lib.app;
 
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXListView;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,6 +57,8 @@ public class App {
     public static String IDENTIFICATE_CLIENT = "identificate/client/client";
     public static String IDENTIFICATE_FOURNISSEUR = "identificate/fournisseur/fournisseur";
 
+    public static String LOAD_PANIER_APPROV = "entree/approvisionnement/loadPanierApprovisionnement";
+
     public static Map<String, String> map = new HashMap();
     public static StackPane stackPane = Main.stage.getContent();
     public static final HashMap<String, Node> SCREENS = new HashMap<>();
@@ -72,6 +75,10 @@ public class App {
         return "/lib/dialog/" + url + ".fxml";
     }
 
+    private String getLoad(String url) {
+        return "/lib/load/" + url + ".fxml";
+    }
+
     public App() {
         map.put(LOGIN, getUrl(LOGIN));
         map.put(ERROR, getUrl(ERROR));
@@ -85,7 +92,7 @@ public class App {
         map.put(VENTES, getUrl(VENTES));
         map.put(LISTE_SORTIE, getUrl(LISTE_SORTIE));
         map.put(PRODUCTS, getUrl(PRODUCTS));
-           map.put(APPROVISIONNEMENT, getUrl(APPROVISIONNEMENT));
+        map.put(APPROVISIONNEMENT, getUrl(APPROVISIONNEMENT));
 
         //Identification
         map.put(IDENTIFICATE_AGENT, getUrl(IDENTIFICATE_AGENT));
@@ -98,6 +105,7 @@ public class App {
         map.put(ADD_AGENT, getDialog(ADD_AGENT));
         map.put(ADD_CLIENT, getDialog(ADD_CLIENT));
         map.put(ADD_FOURNISSEUR, getDialog(ADD_FOURNISSEUR));
+        map.put(LOAD_PANIER_APPROV, getLoad(LOAD_PANIER_APPROV));
     }
 
     public Node get(String view) {
@@ -143,10 +151,17 @@ public class App {
             } else if (Contrainaire instanceof ScrollPane) {
                 ScrollPane contain_area = (ScrollPane) Contrainaire;
                 contain_area.setContent(child);
+            } else if (Contrainaire instanceof JFXListView) {
+                JFXListView contain_area = (JFXListView) Contrainaire;
+//                contain_area.getItems().removeAll();
+                Main.loadPreview = contain_area; 
+  
             }
+   
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
     }
 

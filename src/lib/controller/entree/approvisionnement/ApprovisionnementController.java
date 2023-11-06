@@ -5,11 +5,23 @@
  */
 package lib.controller.entree.approvisionnement;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import lib.app.App;
+import lib.app.appro.PanierEntree;
+import lib.main.Main;
+import lib.model.panierAppro.PanierAppro;
 
 /**
  * FXML Controller class
@@ -30,13 +42,29 @@ public class ApprovisionnementController implements Initializable {
     private TextField dateReception;
     @FXML
     private TextField peremption;
+    @FXML
+    private JFXButton b_panier;
+    @FXML
+    private Button b_valider_panier;
+    @FXML
+    private JFXListView<?> lisPanier;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        isAction();
+    }
+
+    void isAction() {
+        b_panier.setOnAction((e) -> {
+            PanierAppro panierAppro = new PanierAppro(nomTextField.getText(), designation.getText(), quantite.getText(), prixAchat.getText(), dateReception.getText(), peremption.getText());
+            PanierEntree.getInstancePanier().ajouterPanier(panierAppro);
+        });
+        b_valider_panier.setOnAction((e) -> {
+            System.out.println(PanierEntree.getInstancePanier().panier);
+        });
+    }
+
 }

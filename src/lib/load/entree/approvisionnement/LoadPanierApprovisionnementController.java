@@ -3,26 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lib.controller.entree.liste;
+package lib.load.entree.approvisionnement;
 
-import com.jfoenix.controls.JFXListView;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
  * @author PC
  */
-public class ListeController implements Initializable {
+public class LoadPanierApprovisionnementController implements Initializable {
 
     @FXML
-    private JFXListView<?> listeEntree;
+    private MaterialDesignIconView annuler;
     @FXML
-    private TextField searchField;
+    private Label designation;
+    @FXML
+    private Label quantite;
+    @FXML
+    private Label prixUnitaire;
+    @FXML
+    private Label fournisseur;
+    @FXML
+    private Label dateReception;
+    @FXML
+    private Label datePeremption;
 
     /**
      * Initializes the controller class.
