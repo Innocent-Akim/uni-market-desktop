@@ -48,6 +48,7 @@ public class EntreeController implements Initializable {
         });
         b_approvisionnement.setOnMouseClicked((e) -> {
             Utils.getInstance().isMenu(b_approvisionnement, b_liste_entree);
+            App.instance().setContaint(screen_entree, App.APPROVISIONNEMENT);
 
         });
     }
