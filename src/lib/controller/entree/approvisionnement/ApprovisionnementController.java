@@ -49,14 +49,14 @@ public class ApprovisionnementController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        public_lisPanier = lisPanier;
-        isAction();
+        isAction(); 
+        public_lisPanier = lisPanier; 
     }
 
     void isAction() {
         b_panier.setOnAction((e) -> {
-            PanierAppro panierAppro = new PanierAppro(nomTextField.getText(), designation.getText(), quantite.getText(), prixAchat.getText(), dateReception.getText(), peremption.getText());
-            PanierEntree.getInstancePanier().ajouterPanier(panierAppro);
+            PanierAppro panier = new PanierAppro(nomTextField.getText(), designation.getText(), quantite.getText(), prixAchat.getText(), dateReception.getText(), peremption.getText());
+            PanierEntree.getInstancePanier().ajouterPanier(panier);
         });
         b_valider_panier.setOnAction((e) -> {
             System.out.println(PanierEntree.getInstancePanier().panier);

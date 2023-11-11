@@ -1,11 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.sortie.vente.VentesController">
-    
+<AnchorPane id="AnchorPane" prefHeight="756.0" prefWidth="1024.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.controller.sortie.vente.VentesController">
+   <children>
+      <AnchorPane layoutX="629.0" layoutY="14.0" prefHeight="736.0" prefWidth="390.0" style="-fx-background-color: #fff; -fx-border-color: #CDCDCD; -fx-border-width: 0.5px; -fx-border-radius: 0.5px; -fx-background-radius: 0.5px;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <AnchorPane layoutX="6.5" layoutY="7.5" prefHeight="308.0" prefWidth="378.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+               <children>
+                  <Group layoutX="10.0" layoutY="76.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <Button fx:id="b1" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b2" layoutX="94.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b3" layoutX="188.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="3">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="bmultipl" layoutX="282.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="*">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b4" layoutY="45.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="4">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b5" layoutX="94.0" layoutY="45.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b6" layoutX="188.0" layoutY="45.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="6">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="bmoins" layoutX="282.0" layoutY="45.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="-">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b7" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="7">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b8" layoutX="94.0" layoutY="92.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="8">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b9" layoutX="188.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="9">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="bdivise" layoutX="282.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="/">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="b0" layoutY="136.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="bdelete" layoutX="95.0" layoutY="138.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="C">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="bplus" layoutX="282.0" layoutY="139.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="+">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="begal" layoutX="188.0" layoutY="136.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #DBDBDB; -fx-border-radius: 2px; -fx-border-width: 0.5px; -fx-background-radius: 2px;" text="=">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </Group>
+                  <Label fx:id="resultat" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="14.0" prefHeight="47.0" prefWidth="357.0" style="-fx-border-color: #DBDBDB; -fx-background-color: #EAEAEA; -fx-border-width: 0.5px; -fx-border-radius: 3px; -fx-background-radius: 3px;" text=" 0.0 " AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

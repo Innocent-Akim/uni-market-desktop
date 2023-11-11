@@ -22,6 +22,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import lib.main.Main;
 import lib.app.App;
+import lib.app.References;
 
 /**
  * FXML Controller class
@@ -66,6 +67,10 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         isAction();
+        References.styleButton(btnConnecter);
+        usernameTfd.setFont(References.fontApp);
+        passwordTfd.setFont(References.fontApp);
+
     }
 
     @FXML

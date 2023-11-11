@@ -5,12 +5,14 @@
  */
 package lib.load.entree.approvisionnement;
 
+import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import lib.app.References;
 import lib.app.appro.PanierEntree;
 import lib.controller.entree.approvisionnement.ApprovisionnementController;
 
@@ -22,9 +24,8 @@ import lib.controller.entree.approvisionnement.ApprovisionnementController;
 public class LoadPanierApprovisionnementController implements Initializable {
 
     @FXML
-    private MaterialDesignIconView annuler;
-    public static MaterialDesignIconView public_annuler;
-
+    private JFXButton annuler;
+    public static JFXButton public_annuler;
     @FXML
     private Label designation;
     @FXML
@@ -37,6 +38,7 @@ public class LoadPanierApprovisionnementController implements Initializable {
     private Label dateReception;
     @FXML
     private Label datePeremption;
+
     public static String public_designation;
     public static String public_quantite;
     public static String public_prix_unitaire;
@@ -56,6 +58,7 @@ public class LoadPanierApprovisionnementController implements Initializable {
         datePeremption.setText(public_datePeremption);
         dateReception.setText(public_dateReception);
         public_annuler = annuler;
+        References.setFontTextField(dateReception, datePeremption, fournisseur, prixUnitaire, quantite, designation);
         isAction();
     }
 
@@ -64,5 +67,6 @@ public class LoadPanierApprovisionnementController implements Initializable {
             int index = ApprovisionnementController.public_lisPanier.getSelectionModel().getSelectedIndex();
             PanierEntree.getInstancePanier().deleteElementPanier(index);
         });
+
     }
 }

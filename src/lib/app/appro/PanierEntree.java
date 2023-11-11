@@ -5,6 +5,7 @@
  */
 package lib.app.appro;
 
+import com.jfoenix.controls.JFXListView;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -37,15 +38,18 @@ public class PanierEntree {
     }
 
     public void ajouterPanier(PanierAppro prod) {
-        if (this.panier.contains(prod)) {
-
-        }
         this.panier.add(prod);
         panier();
     }
 
+    public void remove(JFXListView... node) {
+        for (JFXListView items : node) {
+            items.getItems().clear();
+        }
+    }
+
     public void panier() {
-        public_lisPanier.getItems().clear();
+        remove(public_lisPanier);
         this.panier.forEach((data) -> {
             try {
                 LoadPanierApprovisionnementController.public_designation = data.getDesignation();
